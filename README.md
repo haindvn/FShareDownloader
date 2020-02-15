@@ -1,7 +1,5 @@
 # FShare Downloader
 
-FShare.vn Downloader
-
 **FShare VIP account required**
 
 Since I can not find any working script for my headless Sheevaplug / Raspberry Pi with Debian distro installed to download files / folders from Fshare.vn (they provide a GUI program on Windows / Mac, not Linux), I searched and was inspired by the [FShare API](https://github.com/tudoanh/get_fshare) / **tudoanh**, then I coded this Python script for my own use and recently I enhanced it a little bit to share with others. Note that you will need a FShare VIP account for this script to work properly.
