@@ -22,7 +22,7 @@ Since I can not find any working script for my headless Sheevaplug / Raspberry P
 In short, please run these commands on Debian system to install the neccessary packages
 ```
 $ sudo apt-get install python3-lxml
-$ sudo pip3 install get_fshare, requests, lxml, hyper, colorama, termcolor, tqdm
+$ sudo pip3 install get_fshare requests hyper colorama termcolor tqdm
 ```
 
 ## Getting Started / Usage
