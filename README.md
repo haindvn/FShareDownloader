@@ -8,7 +8,7 @@ Since I can not find any working script for my headless Sheevaplug / Raspberry P
 
 ![alt text](https://github.com/haindvn/FShareDownloader/blob/master/screenshot3.JPG)
 
-## Requirement packages:
+## Required packages:
 * Pyhon 3.5+
 * lxml (for Debian system, please install python3-lxml package, we don't need pip to compile from source)
 * requests

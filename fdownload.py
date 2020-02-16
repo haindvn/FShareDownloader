@@ -75,7 +75,7 @@ def main():
         fileInfo = service.get_file_info(downloadID)
         print(colored('File: ','white'),colored('{}'.format(fileInfo['name']),'yellow'))
         # print(f'Saving to {location}')
-        download_file(service.download(FShare_File_URL+fileInfo['linkcode']),location)
+        download_file(service.download(FShare_File_URL+fileInfo['linkcode']),location,fileInfo['name'])
         print(colored('{} downloaded'.format(fileInfo['name']),'yellow'))
 
     elif is_folder(downloadID):
@@ -136,15 +136,16 @@ def download_folder(url, location):
     for fileInfo in folderList:
         if not is_folder(fileInfo['furl']):
             print(colored('File #{}: '.format(fileCount),'white'),colored('{}'.format(fileInfo['name']),'yellow'))
-            download_file(service.download(FShare_File_URL+fileInfo['linkcode']),location)
+            download_file(service.download(FShare_File_URL+fileInfo['linkcode']),location,fileInfo['name'])
             fileCount += 1
     
-def download_file(url, location):
+def download_file(url, location,filename):
     """
     Download a particular fshare file with direct link provided from service payload with download bar
     """
-    local_filename = url.split('/')[-1]
-    local_filename = no_accent_vietnamese(local_filename)
+    #local_filename = url.split('/')[-1]
+    local_filename = filename
+    # local_filename = no_accent_vietnamese(local_filename)
     if os.path.exists(location + local_filename):
         print('Local File Existed ! Ignore downloading')
         return 1
