@@ -143,9 +143,9 @@ def download_file(url, location,filename):
     """
     Download a particular fshare file with direct link provided from service payload with download bar
     """
-    #local_filename = url.split('/')[-1]
+    # local_filename = url.split('/')[-1]
     local_filename = filename
-    # local_filename = no_accent_vietnamese(local_filename)
+    local_filename = no_accent_vietnamese(local_filename)
     if os.path.exists(location + local_filename):
         print('Local File Existed ! Ignore downloading')
         return 1
