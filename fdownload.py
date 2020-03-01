@@ -14,11 +14,7 @@ import sys
 import requests
 import re
 
-
-
-
-
-# Requires: get_fshare, requests, lxml, hyper, apiclient, colorama, termcolor, tqdm
+# Requires: get_fshare requests  lxml  hyper apiclient colorama termcolor tqdm
 # Debian package: python3-lxml
 # libxml2 libxslt
 
@@ -141,7 +137,7 @@ def download_folder(url, location):
     
 def download_file(url, location,filename):
     """
-    Download a particular fshare file with direct link provided from service payload with download bar
+    Download a particular file from with direct link provided from service payload with download bar
     """
     # local_filename = url.split('/')[-1]
     local_filename = filename
